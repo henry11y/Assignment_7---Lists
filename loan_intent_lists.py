@@ -9,7 +9,7 @@ def analyze_loans(input_csv_path):
     import csv
     from collections import Counter
 
-    # Helper: safely convert strings to numbers
+
     def _parse_num(s):
         if s is None:
             return None
@@ -23,8 +23,7 @@ def analyze_loans(input_csv_path):
         except ValueError:
             return None
 
-    # Dictionary to store lists per loan_intent
-    intents = {}  # intent -> list of [grade, amount_float, rate_float]
+    intents = {}  
 
     # Read the CSV file
     with open(input_csv_path, newline='', encoding='utf-8') as f:
@@ -71,3 +70,4 @@ def analyze_loans(input_csv_path):
 
 if __name__ == "__main__":
     analyze_loans("LoansDataset.csv")
+
