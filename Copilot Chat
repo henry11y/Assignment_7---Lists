@@ -1,0 +1,30 @@
+Write a Python function that analyzes a loans dataset using only lists and the csv module.
+Do NOT use pandas.
+
+The CSV has columns: loan_intent, loan_grade, loan_amnt, loan_int_rate.
+
+The function should:
+
+Read the CSV file using the csv module.
+
+Create a separate list for each unique loan_intent.
+
+For each intent, store the loan_grade, loan_amnt, and loan_int_rate values inside that intent’s list.
+
+For each loan_intent:
+
+Find the most common loan_grade (use list counting or collections.Counter).
+
+Calculate the average loan_amnt (convert to float).
+
+Calculate the average loan_int_rate (convert to float).
+
+Write the results into a new CSV file called loan_intent_analysis.csv with columns:
+
+loan_intent
+
+most_common_grade
+
+avg_amount
+
+avg_interest_rate
